@@ -1,0 +1,27 @@
+<form #registerForm="ngForm" (ngSubmit)="register()">
+
+  <h2 class="text-center text-primary">Sign Up</h2>
+
+  <hr>
+  <div class="form-group">
+    <input type="text" required [(ngModel)]="model.username" name="username" class="form-control"
+      placeholder="Username">
+  </div>
+
+  <div class="form-group">
+    <input type="password" required [(ngModel)]="model.password" name="password" class="form-control"
+      placeholder="Password">
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="favoriteValue"> what's your fav value? </label>
+    <select class="form-control" id="favoritevalue">
+      <option *ngFor="let value of valuesFromHome" [value]="value"> {{value.name}} </option>
+    </select>
+  </div> -->
+
+  <div class="form-group text-center">
+    <button class="btn btn-success" type="submit">Register</button>
+    <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
+  </div>
+</form>
