@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from "@angular/common/http";
+import { ErrorInterceptorProvider } from "./_services/error.interceptor.service";
 
 @NgModule({
    declarations: [
@@ -24,7 +25,9 @@ import { HttpClientModule } from "@angular/common/http";
       HttpClientModule,
       FormsModule
    ],
-   providers: [],
+   providers: [
+      ErrorInterceptorProvider
+   ],
    bootstrap: [
       AppComponent,
       HomeComponent
