@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    //old: getting value on initialization
+    // old: getting value on initialization
     // this.getValues();
   }
 
