@@ -18,17 +18,21 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 
 import { ListsComponent } from './lists/lists.component';
-import { MemberListsComponent } from './member-lists/member-lists.component';
+import { MemberListsComponent } from './members/member-lists/member-lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { appRoutes } from './routes';
 import { AuthGuard } from './_guards/auth.guard';
+import { MembersComponent } from './members/members.component';
+import { MemberCardComponent } from './members/member-card/member-card.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       NavComponent,
       RegisterComponent,
-      routingComponents
+      routingComponents,
+      MembersComponent,
+      MemberCardComponent
    ],
    imports: [
       BrowserModule,
@@ -36,7 +40,7 @@ import { AuthGuard } from './_guards/auth.guard';
       HttpClientModule,
       FormsModule,
       BsDropdownModule.forRoot()
-      // RouterModule.forRoot(appRoutes)
+      //RouterModule.forRoot(appRoutes)
    ],
    providers: [
       ErrorInterceptorProvider,
