@@ -90,7 +90,6 @@ export class PhotoEditorComponent implements OnInit {
 
   deletePhoto(id: number) {
 
-    debugger;
     this.alertify.confirm('are you sure you want to dele this photo?', () => {
 
       this.userService.deletePhoto(this.authService.decodedToken.nameid, id).subscribe(() => {
